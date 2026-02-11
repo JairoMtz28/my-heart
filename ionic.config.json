@@ -1,0 +1,7 @@
+{
+  "name": "My Heart",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
