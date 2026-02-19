@@ -1,27 +1,100 @@
-#container {
+ion-content {
+  --background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+ion-header ion-toolbar {
+  --background: #FF5A7D;
+  --color: white;
+}
+
+/* ========================= */
+/* Texto superior (zona blanca) */
+/* ========================= */
+
+.info {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 25vh; /* espacio exacto que no ocupa el fondo rojo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+.info h3 {
   margin: 0;
+  font-size: clamp(18px, 2.5vw, 22px);
+  color: #444;
 }
 
-#container a {
-  text-decoration: none;
+/* ========================= */
+/* Fondo rojo inferior */
+/* ========================= */
+
+.bottom-bg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: 75vh;
+  width: 150%;
+
+  background: linear-gradient(135deg, #FF5A7D, #ff4d4d);
+
+  border-top-left-radius: 90% 300px;
+  border-top-right-radius: 90% 300px;
+
+  box-shadow: 0 -8px 20px rgba(0,0,0,0.15);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+}
+
+/* ========================= */
+/* Número + BPM */
+/* ========================= */
+
+.bpm-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: white;
+  margin-bottom: 2vh;
+}
+
+h1 {
+  font-size: clamp(55px, 12vw, 80px);
+  font-weight: bold;
+  margin: 0;
+  line-height: 1;
+}
+
+h2 {
+  font-size: clamp(18px, 4vw, 30px);
+  font-weight: normal;
+  margin: 0;
+  padding-top: 1.2vh;
+}
+
+/* ========================= */
+/* Imagen */
+/* ========================= */
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: clamp(90px, 18vw, 125px);
+  height: auto;
 }
