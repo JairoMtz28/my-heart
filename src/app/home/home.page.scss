@@ -98,3 +98,13 @@ h2 {
   width: clamp(90px, 18vw, 125px);
   height: auto;
 }
+
+canvas {
+  width: 50% !important;
+  max-width: 50%;
+
+  display: block;
+  margin: 20px auto;
+
+  border-radius: 10px;
+}
